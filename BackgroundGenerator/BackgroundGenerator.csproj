@@ -83,35 +83,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Climate.cs" />
-    <Compile Include="Creature.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="Person\NonPlayerCharacter.cs" />
-    <Compile Include="Person\PersonalTimeline.cs" />
-    <Compile Include="Person\PlayerCharacter.cs" />
-    <Compile Include="Person\PlotNonPlayerCharacter.cs" />
-    <Compile Include="Person\Relative.cs" />
-    <Page Include="Page1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Enums\Climate.cs" />
+    <Compile Include="Enums\Creature.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Place\Person\NonPlayerCharacter.cs" />
+    <Compile Include="Models\Place\Person\PersonalTimeline.cs" />
+    <Compile Include="Models\Place\Person\PlayerCharacter.cs" />
+    <Compile Include="Models\Place\Person\PlotNonPlayerCharacter.cs" />
+    <Compile Include="Models\Place\Person\Relative.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Person\OrderedName.cs" />
-    <Compile Include="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Models\Place\Person\OrderedName.cs" />
+    <Compile Include="Generator.xaml.cs">
+      <DependentUpon>Generator.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person\Race.cs" />
-    <Compile Include="Person\Person.cs" />
-    <Compile Include="Place\Region.cs" />
-    <Compile Include="Place\Place.cs" />
+    <Compile Include="Models\Place\Person\Race.cs" />
+    <Compile Include="Models\Place\Person\Person.cs" />
+    <Compile Include="Models\Place\Region.cs" />
+    <Compile Include="Models\Place\Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,6 +141,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Generator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenter\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
