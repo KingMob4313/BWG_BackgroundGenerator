@@ -83,28 +83,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Enums\Culture.cs" />
     <Compile Include="Enums\Climate.cs" />
     <Compile Include="Enums\Creature.cs" />
+    <Compile Include="GeneratorWindow.xaml.cs">
+      <DependentUpon>GeneratorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\Place\Person\NonPlayerCharacter.cs" />
-    <Compile Include="Models\Place\Person\PersonalTimeline.cs" />
-    <Compile Include="Models\Place\Person\PlayerCharacter.cs" />
-    <Compile Include="Models\Place\Person\PlotNonPlayerCharacter.cs" />
-    <Compile Include="Models\Place\Person\Relative.cs" />
+    <Compile Include="Models\Person\NonPlayerCharacter.cs" />
+    <Compile Include="Models\Person\PersonalTimeline.cs" />
+    <Compile Include="Models\Person\PlayerCharacter.cs" />
+    <Compile Include="Models\Person\PlotNonPlayerCharacter.cs" />
+    <Compile Include="Models\Person\Relative.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Place\Person\OrderedName.cs" />
-    <Compile Include="Generator.xaml.cs">
-      <DependentUpon>Generator.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Person\OrderedName.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Place\Person\Race.cs" />
-    <Compile Include="Models\Place\Person\Person.cs" />
+    <Compile Include="Enums\Race.cs" />
+    <Compile Include="Models\Person\Person.cs" />
     <Compile Include="Models\Place\Region.cs" />
     <Compile Include="Models\Place\Place.cs" />
+    <Compile Include="ConsonantLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -143,7 +145,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Generator.xaml">
+    <Page Include="GeneratorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
